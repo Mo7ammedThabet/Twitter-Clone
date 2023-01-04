@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twitter Clone GSG</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="layout">
+      <div class="layout_left_sidebar">
+        <div class="sidebar_menu">
+          <img src="./svg/twitter.svg" class="brand" />
+          <div class="sidebar_menu_item active">
+            <img src="./svg/home.svg" class="icon" />
+            Home
+          </div>
+          <div class="sidebar_menu_item">
+            <img src="./svg/explore.svg" class="icon" />
+            Explore
+          </div>
+
+          <div class="sidebar_menu_item">
+            <img src="./svg/notifications.svg" class="icon" />
+            Notifications
+          </div>
+
+          <div class="sidebar_menu_item">
+            <img src="./svg/messages.svg" class="icon" />
+            Messages
+          </div>
+
+          <div class="sidebar_menu_item">
+            <img src="./svg/profile.svg" class="icon" />
+            Profile
+          </div>
+
+          <div class="sidebar_menu_item">
+            <img src="./svg/more.svg" class="icon" />
+            More
+          </div>
+        </div>
+      </div>
+      <div id="tweet_layout">
+        <div class="tweet share_tweet">
+          <form class="tweetCreator">
+            <input type="text" id="myUsername" placeholder="Your Username" />
+            <textarea
+              placeholder="Cretae new Tweet..."
+              id="myInput"
+              rows="10"
+              cols="70"
+            ></textarea>
+            <span onclick="newElement()" class="share_btn">Share</span>
+          </form>
+        </div>
+        <div id="tweet_container">
+          <div class="tweet" id="0">
+            <img
+              class="tweet_logo"
+              src="https://avatars.githubusercontent.com/u/76035910?v=4"
+            />
+            <div class="tweet_main">
+              <div class="tweet_header">
+                <div class="tweet_name">Mohammed Thabet</div>
+                <div class="tweet_slug">@Mohammed_Thabet</div>
+                <div class="tweet_time">12:50</div>
+              </div>
+              <div class="content">
+                Welcome to my Twitter clone
+                <br />
+                I hop you like it
+              </div>
+              <br />
+              <div class="tweet_icon">
+                <i class="fas fa-heart" onclick="click_love(0)">Like</i>
+                <i class="fas fa-retweet" onclick="retweet(0)">Retweet</i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right_sidebar_container">
+        <div class="right_sidebar">
+          <div class="search">
+            <div class="search-logo">
+              <i class="fas fa-search"></i>
+            </div>
+            <div class="search-field">
+              <input type="text" placeholder="Search Twitter" />
+            </div>
+          </div>
+          <div class="trends_for_you">
+            <div class="trends_for_you_block">
+              <div class="trends_for_you_heading">Trends for you</div>
+            </div>
+            <div class="trends_for_you_block">
+              <div class="trends_for_you_information">
+                Trending in Palestine
+              </div>
+              <div class="trends_for_you_name">#Gaza</div>
+              <div class="trends_for_you_information">5,800 Tweets</div>
+            </div>
+            <div class="trends_for_you_block">
+              <div class="trends_for_you_name">#frontend</div>
+              <div class="trends_for_you_information">4025 Tweets</div>
+            </div>
+            <div class="trends_for_you_block">
+              <div class="trends_for_you_name">#javascript</div>
+              <div class="trends_for_you_information">125k Tweets</div>
+            </div>
+          </div>
+          <div class="who_to_follow">
+            <div class="who_to_follow_block">
+              <div class="who_to_follow_heading">Who to follow</div>
+            </div>
+            <div class="who_to_follow_block">
+              <img
+                class="who_to_follow_author_logo"
+                src="https://i.pinimg.com/474x/97/aa/84/97aa847d061a14894178805f1d551500.jpg"
+              />
+              <div class="who_to_follow_content">
+                <div>
+                  <div class="who_to_follow_author_name">Ahmed</div>
+                  <div class="who_to_follow_author_slug">@ahmed</div>
+                </div>
+                <div class="who_to_follow_button">Follow</div>
+              </div>
+            </div>
+            <div class="who_to_follow_block">
+              <img
+                class="who_to_follow_author_logo"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq5eMRxkFIQMnfAe5p_L-BJUdf6xv6CvD0zw&usqp=CAU"
+              />
+              <div class="who_to_follow_content">
+                <div>
+                  <div class="who_to_follow_author_name">Sami</div>
+                  <div class="who_to_follow_author_slug">@Sami</div>
+                </div>
+                <div class="who_to_follow_button">Follow</div>
+              </div>
+            </div>
+
+            <div class="who_to_follow_block">
+              <img
+                class="who_to_follow_author_logo"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHgwL4r2DN1qg91OOqIViiv0Uxw-9yqo-PiQ&usqp=CAU"
+              />
+              <div class="who_to_follow_content">
+                <div>
+                  <div class="who_to_follow_author_name">Sumaya</div>
+                  <div class="who_to_follow_author_slug">@Sumaya</div>
+                </div>
+                <div class="who_to_follow_button">Follow</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
